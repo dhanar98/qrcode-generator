@@ -13,8 +13,6 @@ class QrCodeWifi extends Model
         'ssid',
         'password',
         'hidden',
-        'qr_code_path'
+        'qr_code_path',
     ];
-
-
 }

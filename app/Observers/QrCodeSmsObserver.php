@@ -6,15 +6,13 @@ use App\Models\QrCodeSms;
 
 class QrCodeSmsObserver
 {
-
     /**
-    * Handle the QrCodeConfig "creating" event.
+     * Handle the QrCodeConfig "creating" event.
      */
     public function creating(QrCodeSms $qrCodeSms): void
     {
         //
     }
-
 
     /**
      * Handle the QrCodeSms "created" event.

@@ -8,7 +8,6 @@ use Illuminate\Support\Str;
 
 class UserObserver
 {
-
     public function creating(User $user): void
     {
         // Generate UUIDs for api_key and api_password columns

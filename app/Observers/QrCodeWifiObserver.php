@@ -6,15 +6,13 @@ use App\Models\QrCodeWifi;
 
 class QrCodeWifiObserver
 {
-
     /**
-    * Handle the QrCodeConfig "creating" event.
+     * Handle the QrCodeConfig "creating" event.
      */
     public function creating(QrCodeWifi $qrCodeWifi): void
     {
         //
     }
-
 
     /**
      * Handle the QrCodeWifi "created" event.
@@ -31,5 +29,4 @@ class QrCodeWifiObserver
     {
         //
     }
-
 }

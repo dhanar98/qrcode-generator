@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('qr_code_id')->constrained('qr_code');
             $table->decimal('latitude', 10, 7);
             $table->decimal('longitude', 10, 7);
+            $table->text('qr_code_path')->nullable();
             $table->timestamps();
         });
     }

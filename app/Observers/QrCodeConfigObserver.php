@@ -6,10 +6,9 @@ use App\Models\QrCodeConfig;
 
 class QrCodeConfigObserver
 {
-
     /**
      * Handle the QrCodeConfig "creating" event.
-    */
+     */
     public function creating(QrCodeConfig $qrCodeConfig): void
     {
 

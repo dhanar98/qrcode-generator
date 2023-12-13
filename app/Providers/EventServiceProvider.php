@@ -34,7 +34,6 @@ class EventServiceProvider extends ServiceProvider
         ],
     ];
 
-
     protected $observers = [
         User::class => UserObserver::class,
         QrCode::class => QrCodeObserver::class,
@@ -43,7 +42,7 @@ class EventServiceProvider extends ServiceProvider
         QrCodeGeo::class => QrCodeGeoObserver::class,
         QrCodePhoneNumber::class => QrCodePhoneNumber::class,
         QrCodeSms::class => QrCodeSmsObserver::class,
-        QrCodeWifi::class => QrCodeWifiObserver::class
+        QrCodeWifi::class => QrCodeWifiObserver::class,
     ];
 
     /**

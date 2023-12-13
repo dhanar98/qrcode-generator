@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\SoftDeletes;
-
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -31,7 +30,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'address',
         'is_active',
         'referal_code',
-        'app_code'
+        'app_code',
     ];
 
     /**
@@ -43,7 +42,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'remember_token',
         'api_key',
-        'api_password'
+        'api_password',
     ];
 
     /**
@@ -58,20 +57,17 @@ class User extends Authenticatable implements MustVerifyEmail
         'is_restricted' => 'boolean',
     ];
 
-
     /**
      * The attributes that should be mutated to dates.
      *
      * @var array
-    */
+     */
     protected $dates = ['deleted_at'];
-
 
     public function qrcodes()
     {
         return $this->hasMany(QrCode::class);
     }
-
 
     // Relationship for phone_number QrCodes
     public function phoneNumberCodes()
@@ -96,6 +92,4 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(QrCode::class)->ofType('email');
     }
-
-
 }

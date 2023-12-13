@@ -11,5 +11,6 @@ class QrCodeGeo extends Model
     protected $fillable = [
         'latitude',
         'longitude',
+        'qr_code_path',
     ];
 }

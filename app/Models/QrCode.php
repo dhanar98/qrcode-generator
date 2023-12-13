@@ -11,6 +11,18 @@ class QrCode extends Model
 
     protected $table = 'qr_code';
 
+    protected $fillable = [
+        'qr_code_key',
+        'user_id',
+        'size',
+        'style',
+        'eye',
+        'margin',
+        'image_type',
+        'creation_date',
+        'expiry_date',
+    ];
+
     public function config()
     {
         return $this->hasOne(QrCodeConfig::class);
@@ -45,5 +57,4 @@ class QrCode extends Model
     {
         return $query->where('type', $type);
     }
-
 }

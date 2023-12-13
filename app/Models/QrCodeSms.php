@@ -12,6 +12,6 @@ class QrCodeSms extends Model
         'qr_code_id',
         'phone_number',
         'message',
-        'qr_code_path'
+        'qr_code_path',
     ];
 }

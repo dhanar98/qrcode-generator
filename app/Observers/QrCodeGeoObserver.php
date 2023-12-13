@@ -6,10 +6,8 @@ use App\Models\QrCodeGeo;
 
 class QrCodeGeoObserver
 {
-
-
     /**
-    * Handle the QrCodeConfig "creating" event.
+     * Handle the QrCodeConfig "creating" event.
      */
     public function creating(QrCodeGeo $qrCodeGeo): void
     {

@@ -13,6 +13,6 @@ class QrCodeEmail extends Model
         'email',
         'subject',
         'message',
-        'qr_code_path'
+        'qr_code_path',
     ];
 }

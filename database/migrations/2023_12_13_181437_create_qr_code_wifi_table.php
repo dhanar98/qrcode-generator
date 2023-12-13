@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('encryption');
             $table->string('ssid');
             $table->string('password');
-            $table->boolean('hidden')->default(FALSE);
+            $table->boolean('hidden')->default(false);
             $table->text('qr_code_path')->nullable();
             $table->timestamps();
         });

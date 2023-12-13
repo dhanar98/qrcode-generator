@@ -10,6 +10,7 @@ class QrCodePhoneNumber extends Model
 
     protected $fillable = [
         'qr_code_id',
-        'phone_number'
+        'phone_number',
+        'qr_code_path',
     ];
 }

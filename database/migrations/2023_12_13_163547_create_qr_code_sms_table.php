@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('qr_code_sms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('qr_code_id')->constrained('qr_code');
-            $table->string('phone_number',50);
+            $table->string('phone_number', 50);
             $table->text('message');
             $table->text('qr_code_path')->nullable();
             $table->timestamps();

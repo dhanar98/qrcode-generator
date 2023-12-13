@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('app_user', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email',40)->unique();
+            $table->string('email', 40)->unique();
             $table->text('profile_dp')->nullable();
             $table->string('country_code', 20)->nullable();
             $table->string('phone_number', 30)->unique()->nullable();
@@ -23,9 +23,9 @@ return new class extends Migration
             $table->uuid('api_key')->unique();
             $table->uuid('api_password')->unique();
             $table->text('address')->nullable();
-            $table->boolean('is_joined')->default(FALSE);
-            $table->boolean('is_active')->default(TRUE);
-            $table->boolean('is_restricted')->default(FALSE);
+            $table->boolean('is_joined')->default(false);
+            $table->boolean('is_active')->default(true);
+            $table->boolean('is_restricted')->default(false);
             $table->string('app_code')->unique();
             $table->string('referal_code')->nullable();
             $table->rememberToken();

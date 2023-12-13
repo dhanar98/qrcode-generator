@@ -8,7 +8,7 @@ class QrCodeEmailObserver
 {
     /**
      * Handle the QrCodeConfig "creating" event.
-    */
+     */
     public function creating(QrCodeEmail $qrCodeEmail): void
     {
 

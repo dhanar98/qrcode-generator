@@ -6,16 +6,13 @@ use App\Models\QrCodePhoneNumber;
 
 class QrCodePhoneNumberObserver
 {
-
-
     /**
-    * Handle the QrCodeConfig "creating" event.
+     * Handle the QrCodeConfig "creating" event.
      */
     public function creating(QrCodePhoneNumber $qrCodePhoneNumber): void
     {
         //
     }
-
 
     /**
      * Handle the QrCodePhoneNumber "created" event.
