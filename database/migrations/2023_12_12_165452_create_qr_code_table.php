@@ -23,6 +23,7 @@ return new class extends Migration
             $table->timestamp('creation_date')->useCurrent();
             $table->date('expiry_date')->nullable();
             $table->timestamps(); // Created at and Updated at timestamps
+            $table->softDeletes();
         });
     }
 

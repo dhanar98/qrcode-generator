@@ -54,15 +54,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'is_joined' => 'boolean',
         'is_active' => 'boolean',
-        'is_restricted' => 'boolean',
+        'is_restricted' => 'boolean'
     ];
-
-    /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = ['deleted_at'];
 
     public function qrcodes()
     {

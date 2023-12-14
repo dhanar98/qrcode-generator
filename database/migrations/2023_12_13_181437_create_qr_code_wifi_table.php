@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('qr_code_wifi', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('qr_code_id')->constrained('qr_code');
+            $table->foreignId('qr_code_id')->constrained('qr_code')->onDelete('cascade');
             $table->string('encryption');
             $table->string('ssid');
             $table->string('password');
             $table->boolean('hidden')->default(false);
             $table->text('qr_code_path')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
