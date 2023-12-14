@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('style', 30)->default('dot');
             $table->string('eye', 30)->default('circle');
             $table->unsignedInteger('margin')->default(1);
-            $table->string('image_type', 20)->default('png');
+            $table->string('format', 20)->default('png');
             $table->timestamp('creation_date')->useCurrent();
             $table->date('expiry_date')->nullable();
             $table->timestamps(); // Created at and Updated at timestamps

@@ -18,7 +18,7 @@ class QrCode extends Model
         'style',
         'eye',
         'margin',
-        'image_type',
+        'format',
         'creation_date',
         'expiry_date',
     ];
