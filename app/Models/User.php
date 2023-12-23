@@ -85,4 +85,14 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(QrCode::class)->ofType('email');
     }
+
+    public function referralsMade()
+    {
+        return $this->hasMany(Referral::class, 'referrer_id');
+    }
+
+    public function referralsReceived()
+    {
+        return $this->hasMany(Referral::class, 'referred_id');
+    }
 }
