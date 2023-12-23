@@ -14,6 +14,7 @@ class QrCodeConfig extends Model
     protected $fillable = [
         'qr_code_id',
         'merge',
+        'color',
         'background_color',
         'gradient_from_color',
         'gradient_to_color',
