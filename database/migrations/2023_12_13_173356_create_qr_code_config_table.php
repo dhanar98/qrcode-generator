@@ -16,9 +16,9 @@ return new class extends Migration
             $table->foreignId('qr_code_id')->constrained('qr_code')->onDelete('cascade');
             $table->text('frame_image')->nullable();
             $table->string('error_correction', 10)->nullable();
-            $table->string('merge', 500)->nullable();
-            $table->string('color', 40)->nullable();
-            $table->string('background_color', 40)->nullable();
+            $table->string('merge', 500)->nullable()->default(1);
+            $table->string('color', 40)->nullable()->default('#000');
+            $table->string('background_color', 40)->nullable()->default('#FFF');
             $table->string('gradient_from_color', 40)->nullable();
             $table->string('gradient_to_color', 40)->nullable();
             $table->string('gradient_type', 30)->nullable();
